@@ -9,7 +9,13 @@ public class Time{
     int minute = 7;
     int second = 30;
 
-    System.out.println("The current time is " + hour + ":" + minute + ":" + second + ".");
+    System.out.print("The current time is ");
+    System.out.print(hour);
+    System.out.print(":");
+    System.out.print(minute);
+    System.out.print(":");
+    System.out.print(second);
+    System.out.println(".");
 
     int x = hour * 60 * 60 + minute * 60 + second;
     
