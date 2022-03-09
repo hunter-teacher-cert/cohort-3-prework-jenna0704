@@ -12,7 +12,7 @@ public class Celsius{
     double fahrenheit;
     
     System.out.print("What is the temperature in degrees Celsius?");
-    celcius = in.nextInt();
+    celcius = in.nextDouble();
 
     fahrenheit = celcius * 9 / 5 + 32;
 
