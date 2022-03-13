@@ -12,8 +12,8 @@ public class Max{
     }
     System.out.println("Maximum = "+ max);
     return max;
-
-//You can write this method using an enhaced for loop becasue we are focusing on the value of each index of the array. 
+    
+    //You can write this method using an enhaced for loop becasue we are focusing on the value of each index of the array.
   }
 
   public static int indexOfMaxEnhancedForLoop(int[] a){
