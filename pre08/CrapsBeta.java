@@ -3,9 +3,9 @@ import java.util.*;
 import java.util.Scanner;
 import java.util.Arrays;
 
-//using 2 dice
+//users input the number of dice they want to use
 
-public class Craps{
+public class CrapsBeta{
 
   public static Random random = new Random();
   
@@ -27,6 +27,10 @@ public class Craps{
     Scanner scanner = new Scanner(System.in);
     int totalRounds = scanner.nextInt();
 
+    System.out.println("How many dice do you want to use?");
+    int numberOfDice = scanner.nextInt();
+    int maximumOfDice = numberOfDice * 6;
+    
     boolean pointStatus = false;
     int pointRule = 0;
     String outcome = "You win!";
@@ -51,7 +55,7 @@ public class Craps{
         pointStatus = true;
 
         while (pointStatus == true){
-          newRoll = shoot(2, 12);
+          newRoll = shoot(numberOfDice, maximumOfDice);
           array.add(newRoll);
 
           if (newRoll == pointRule){
