@@ -9,35 +9,36 @@ public class Time{
     int minute = 7;
     int second = 30;
 
-    System.out.print("The current time is ");
-    System.out.print(hour);
-    System.out.print(":");
-    System.out.print(minute);
-    System.out.print(":");
-    System.out.print(second);
-    System.out.println(".");
+    System.out.printf("The current time is %d:%d:%d.\n", hour, minute, second);
 
-    int x = hour * 60 * 60 + minute * 60 + second;
+    //Calculate and display the number of seconds since midnight.
+    System.out.print("Number of seconds since midnight = ");
+    System.out.println(hour*60*60 + minute*60 + second);
+
+    //Calculuate and display the number of seconds remaining in the day.
+    int secSinceMidnight = hour*60*60 + minute*60 + second;
+    System.out.print("Number of seconds remaining in the day = ");
+    System.out.println(24*60*60 - secSinceMidnight);
+
+    //Calculate and display the percentage of the day that ha passed.
+    double timePassed = hour*60.0*60.0 + minute*60.0 + second;
+    double percentPassed = timePassed/(24.0*60.0*60.0) * 100;
+    System.out.printf("Percentage of the day that has passed = %.1f %% \n", percentPassed);
     
-    System.out.println("Number of seconds since midnight: " + x);
-
-    int y = 86400 - x;
-    
-    System.out.println("Number of seconds remaining in the day: " + y);
-
-    double percentage = (x * 100) / 86400.0;
-    
-    System.out.println("Percentage of the day that has passed: " + percentage + "%");
-
     int hourCurrent = 20;
     int minuteCurrent = 17;
     int secondCurrent = 45;
 
-    System.out.println("The current time is " + hourCurrent + ":" + minuteCurrent + ":" + secondCurrent + ".");
-    
-    System.out.println("The elapsed time since I started working on this exercise is " + (hourCurrent - hour) + " hour, " + (minuteCurrent - minute) + " minutes, and " + (secondCurrent - second) + " seconds.");
+    System.out.printf("The current time is %d:%d:%d.\n", hourCurrent, minuteCurrent, secondCurrent);
 
-    int z = (hourCurrent - hour) * 3600 + (minuteCurrent - minute) * 60 + (secondCurrent - second);
+    //Calculate and display elapsed time
+    int a = Math.abs(hourCurrent-hour);
+    int b = Math.abs(minuteCurrent-minute);
+    int c = Math.abs(secondCurrent-second);
+    System.out.print("The elapsed time since I started working on this exercise is ");
+    System.out.printf("%d hours, %d minutes, and %d seconds.\n", a, b, c);
+
+    int z = a * 3600 + b * 60 + c;
 
     System.out.println("Number of seconds since I started working on this exercise: " + z);
   

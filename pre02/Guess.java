@@ -1,5 +1,3 @@
-import java.io.*;
-import java.util.*;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -16,18 +14,19 @@ public class Guess{
     System.out.print("Type a number: ");
 
     guess = in.nextInt();
+    in.nextLine();
     
     System.out.println("Your guess is: " + guess);
     
+    //pick a random number
     Random random = new Random();
-  
     int number = random.nextInt(100)+1;
   
     System.out.println("The number I was thinking of is: " + number);
 
-    int x = Math.abs(guess - number);
+    int difference = Math.abs(guess - number);
     
-    System.out.println("You were off by: " + x);
+    System.out.println("You were off by: " + difference);
   
 }
 }

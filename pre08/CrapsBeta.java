@@ -34,13 +34,13 @@ public class CrapsBeta{
     boolean pointStatus = false;
     int pointRule = 0;
     String outcome = "You win!";
-    List<Integer>array = new ArrayList<Integer> ();
+    List<Integer>shootsHistory = new ArrayList<Integer> ();
     int newRoll = 0;
     
     for (int i = 0; i < totalRounds; i++){
       
-      int firstShoot = shoot(2, 12); 
-      array.add(firstShoot);
+      int firstShoot = shoot(numberOfDice, maximumOfDice); 
+      shootsHistory.add(firstShoot);
     
       if (firstShoot == 2 || firstShoot == 3 || firstShoot == 12){
         outcome = "You lose!";
@@ -56,7 +56,7 @@ public class CrapsBeta{
 
         while (pointStatus == true){
           newRoll = shoot(numberOfDice, maximumOfDice);
-          array.add(newRoll);
+          shootsHistory.add(newRoll);
 
           if (newRoll == pointRule){
             outcome = "You win!";
@@ -70,8 +70,8 @@ public class CrapsBeta{
         }
       }
 
-      System.out.println("Round " + (i + 1) + ": " + array + " " + outcome);
-      array.clear();
+      System.out.println("Round " + (i + 1) + ": " + shootsHistory + " " + outcome);
+      shootsHistory.clear();
       }
     
       scanner.close();

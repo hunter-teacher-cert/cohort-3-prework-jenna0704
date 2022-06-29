@@ -33,7 +33,7 @@ public class Beer{
         
       else {
       
-        System.out.println(n + " bottles of beer on the wall,");
+      System.out.println(n + " bottles of beer on the wall,");
       System.out.println(n + " bottles of beer,");
       System.out.println("ya' take one down, ya' pass it around,");
       System.out.println(n - 1 + " bottles of beer on the wall.");

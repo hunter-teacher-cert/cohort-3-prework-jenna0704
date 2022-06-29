@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Data{
+public class Date{
 
   public static void main(String[] args){
 
@@ -15,11 +15,11 @@ public class Data{
     System.out.println("Date:" + date);
     System.out.println("Year:" + year);
     
-    System.out.println("American format:");
-    System.out.println(day + "," + month +" " + date + "," + year);
-
-    System.out.println("European format:");
-    System.out.println(day + " " + date + " " + month + " " + year);
+    //Display the date in standard American format 
+    System.out.printf("American format: %s, %s %d, %d\n", day, month, date, year);
+        
+    //Display the date in European format 
+    System.out.printf("European format: %s %d %s %d\n", day, date, month, year);
 
   }
   
